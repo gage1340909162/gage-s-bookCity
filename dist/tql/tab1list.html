@@ -1,0 +1,13 @@
+ {{#each items}}
+<a class="outBox" href="/page/details.html?id={{fiction_id}}">
+    <dl>
+        <dt><img src="{{cover}}" alt=""></dt>
+        <dd>
+            <h4 class="tit">{{title}}</h4>
+            <font class="name">{{authors}}</font>
+            <div class="cont">{{summary}}</div>
+            <p>{{#each tags}}<span>{{this}}</span>{{/each}}</p>
+        </dd>
+    </dl>
+</a>
+{{/each}}

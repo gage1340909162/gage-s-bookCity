@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge,chrome=1">
+    <title>Document</title>
+    <link rel="stylesheet" href="../fonts/iconfont.css">
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+        
+        body,
+        html {
+            width: 100%;
+            height: 100%;
+            font-size: .32rem;
+        }
+        
+        .loginBox {
+            width: 70%;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+        
+        input,
+        lable,
+        button {
+            width: 100%;
+            margin-top: .2rem;
+            display: block;
+        }
+        
+        input {
+            width: 100%;
+            height: .8rem;
+            border: .01rem solid #999;
+            padding: .2rem;
+            box-sizing: border-box;
+        }
+        
+        button {
+            border: 0;
+            background: orange;
+            color: #fff;
+            height: .8rem;
+            border-radius: .06rem;
+            font-size: .36rem;
+        }
+        
+        p {
+            color: #f00;
+            margin-top: .1rem;
+            position: relative;
+        }
+        
+        p .show {
+            color: #333;
+            position: absolute;
+            top: .25rem;
+            right: .25rem;
+        }
+        
+        p .show.active {
+            color: orange;
+        }
+    </style>
+</head>
+
+<body>
+    <form class="loginBox">
+        <lable>账号：</lable>
+        <p><input type="text" class="user" placeholder="用户名/手机号/邮箱"></p>
+        <lable>密码：</lable>
+        <p><input type="password" class="pwd" placeholder="密码"><em class="show icon iconfont icon-eyeopen"></em></p>
+        <p class="tip"></p>
+        <button type="button" class="loginBtn">登录</button>
+    </form>
+</body>
+<script src="../js/lib/require.js"></script>
+<script>
+    require(["../js/main"], function() {
+        require(["login"]);
+    })
+</script>
+
+</html>

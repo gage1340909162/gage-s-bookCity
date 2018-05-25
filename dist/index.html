@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge,chrome=1">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="fonts/iconfont.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="wrap">
+        <header class="head">
+            <span><img src="img/head.jpg" alt=""></span>
+            <nav class="nav"><span class="active">书城</span><span>书架</span></nav>
+            <a href="/page/login.html" class="icon iconfont icon-wode"></a>
+        </header>
+        <main class="main swiper-container">
+            <div class="main_inside swiper-wrapper">
+                <div class="book_city swiper-slide">
+
+                </div>
+                <div class="book_rack swiper-slide">
+                    <div class="rack_inside">
+                        <div class="search">
+                            <em class="icon iconfont icon-fangdajing"></em>
+                            <a href="/page/search.html">输入书名/作者/关键字</a>
+                            <span class="hyh icon iconfont icon-gongzuo"></span>
+                        </div>
+                        <div class="rack_list">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="js/lib/require.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        require(["index"]);
+    </script>
+</body>
+
+</html>

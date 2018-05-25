@@ -1,0 +1,42 @@
+<div class="head">
+    <em class="icon iconfont icon-xiangzuo"></em>
+    <h4>{{item.title}}</h4>
+    <em class="icon iconfont icon-iconhuidaoshouye"></em>
+</div>
+<div class="main">
+    <dl class="detailBook">
+        <dt><img src="{{item.cover}}" alt=""></dt>
+        <dd>
+            <h4 class="tit">{{item.title}}</h4>
+            <p class="name">{{item.authors}}</p>
+            <p class="price">价格：<span>{{item.price}}</span>书币/千字</p>
+            <p class="wordCount">字数：<span>{{item.word_count}}</span>万字</p>
+        </dd>
+    </dl>
+    <div class="btn"><a href="javascript:;" class="startRead">开始阅读</a><a href="javascript:;" class="load">下载</a></div>
+    <div class="content active">{{item.content}}</div>
+    <div class="newest">最新：{{item.latest}}</div>
+    <div class="tags">
+        <h6>类别标签</h6>
+        <ul>
+            {{#each item.tags}}
+            <li>{{this}}</li>
+            {{/each}}
+        </ul>
+    </div>
+    <div class="otherBook">
+        <h5 class="tip">作者其他图书</h5>
+        <div>
+            {{#each author_books}}
+            <dl>
+                <dt><img src="{{cover}}" alt=""></dt>
+                <dd>{{title}}</dd>
+            </dl>
+            {{/each}}
+        </div>
+    </div>
+    <div class="bookMsg">
+        <p class="tip">图书信息</p>
+        <p>版权：{{item.rights}}</p>
+    </div>
+</div>

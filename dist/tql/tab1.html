@@ -1,0 +1,81 @@
+<div class="evm_inside" data-upload="上拉加载更多">
+    <div class="search">
+        <em class="icon iconfont icon-fangdajing"></em>
+        <a href="/page/search.html">输入书名/作者/关键字</a>
+    </div>
+    <div class="banner swiper-container swiper-no-swiping">
+        <ul class="banner_cont swiper-wrapper">
+            {{#each data0.data.data}}
+            <li class="swiper-slide">
+                <a href="javascript:;"><img src="{{ad_pic_url}}" alt=""></a>
+            </li>
+            {{/each}}
+        </ul>
+        <ol class="swiper-pagination page"></ol>
+    </div>
+    <div class="subnav">
+        <div><em class="icon iconfont icon-zhifu-01"></em>限免</div>
+        <div><em class="icon iconfont icon-nan"></em>男生</div>
+        <div><em class="icon iconfont icon-nv"></em>女生</div>
+        <div><em class="icon iconfont icon-wodedingdan"></em>分类</div>
+        <div><em class="icon iconfont icon-zuobiao"></em>排行</div>
+    </div>
+    <div class="week_hot">
+        <h3 class="title">{{data1.ad_name}}</h3>
+        <div class="week_list">
+            {{#each data1.data.data}}
+            <a href="/page/details.html?id={{fiction_id}}">
+                <dl>
+                    <dt><img src="{{cover}}" alt=""></dt>
+                    <dd>{{title}}</dd>
+                </dl>
+            </a>
+            {{/each}}
+        </div>
+        <a href="javascript:;" class="week_more">查看更多</a>
+    </div>
+    <div class="recommed">
+        <h4 class="title">{{data2.ad_name}}</h4>
+        <div class="recom_list">
+            {{#recom data2.data.data}} {{html}} {{/recom}}
+        </div>
+        <p class="recom_down"><a href="javascript:;" class="recom_cut">换一换</a><a href="javascript:;" class="recom_all">查看全部</a></p>
+    </div>
+    <div class="girl_like">
+        <h4 class="title">{{data3.ad_name}}</h4>
+        <div class="girl_list">
+        </div>
+        <p class="girl_down"><a href="javascript:;" class="girl_cut">换一换</a><a href="javascript:;" class="girl_all">女生频道>></a></p>
+    </div>
+    <div class="boy_like">
+        <h4 class="title">{{data4.ad_name}}</h4>
+        <div class="boy_list">
+        </div>
+        <p class="boy_down"><a href="javascript:;" class="boy_cut">换一换</a><a href="javascript:;" class="boy_all">男生频道>></a></p>
+    </div>
+    <div class="free_time">
+        <h3 class="title">{{data5.ad_name}}</h3>
+        <div class="free_list">
+            {{#each data5.data.data}}
+            <a href="/page/details.html?id={{data.fiction_id}}">
+                <dl>
+                    <dt><img src="{{data.cover}}" alt=""></dt>
+                    <dd>{{data.title}}</dd>
+                </dl>
+            </a>
+            {{/each}}
+        </div>
+        <a href="javascript:;" class="free_more">更多限免佳作>></a>
+    </div>
+    <div class="special">
+        <h4 class="title">{{data6.ad_name}}</h4>
+        <div class="special_pic">
+            {{#each data6.data.data}}
+            <a href="/page/details.html?id={{reference_id}}"><img src="{{ad_pic_url}}" alt=""></a>
+            {{/each}}
+        </div>
+        <a href="javascript:;" class="special_more">更多精彩专题>></a>
+    </div>
+    <div class="pbl_list"></div>
+</div>
+<p class="downLoad">下拉可刷新</p>

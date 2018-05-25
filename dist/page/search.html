@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge,chrome=1">
+    <title>Document</title>
+    <link rel="stylesheet" href="../fonts/iconfont.css">
+    <link rel="stylesheet" href="../css/style1.css">
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="top">
+            <a href="index.html" class="back icon iconfont icon-xiangzuo"></a>
+            <div class="seek"><em class="icon iconfont icon-fangdajing"></em><input type="text" placeholder="请输入书名/作者/关键字"><span>搜索</span></div>
+        </div>
+        <div class="main">
+
+        </div>
+
+    </div>
+    <script src="../js/lib/require.js"></script>
+    <script src="../js/main.js"></script>
+    <script class="search_nav" type="text/x-handlebars-template">
+        <ul class="nav">
+            {{#each ads}}
+            <li>{{ad_name}}</li>
+            {{/each}}
+        </ul>
+    </script>
+    <script class="search_list" type="text/x-handlebars-template">
+        {{#if items.length}}
+        <ul class="list">
+            {{#each items}}
+            <li class="evList">
+                <a class="outBox" href="javascript:;">
+                    <dl>
+                        <dt><img src="{{cover}}" alt=""></dt>
+                        <dd>
+                            <h4 class="tit">{{title}}</h4>
+                            <div class="cont">{{intro}}</div>
+                            <p>{{#each role}}<span>{{this}}</span>{{/each}}</p>
+                        </dd>
+                    </dl>
+                </a>
+            </li>
+            {{/each}}
+        </ul>
+        {{else}}
+        <h4 class="tip">暂无数据</h4>
+        {{/if}}
+    </script>
+    <script>
+        require(['search'])
+    </script>
+</body>
+
+</html>
